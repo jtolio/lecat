@@ -13,7 +13,8 @@ connections to my process on port 8080.
 
 Unfortunately, this isn't HTTPS or SSL. It'd be nice to be able to run a small
 binary like socat that listens on 443, does SSL termination, and redirects the
-actual unencrypted traffic to localhost:8080.
+actual unencrypted traffic to localhost:8080. You can do this, too, with
+socat, but certs are just such a hassle. OR WERE!
 
 With the advent of [Let's Encrypt](https://letsencrypt.org/), having a small
 binary that actually does the entire process of making a key, getting a
