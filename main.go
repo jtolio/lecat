@@ -28,7 +28,7 @@ var (
 		"the address to forward unencrypted connections to. "+
 			"probably something like 'localhost:8080'")
 	statePath = flag.String("path",
-		filepath.Join(currentUser().HomeDir, ".lecat"),
+		filepath.Join(os.Getenv("HOME"), ".lecat"),
 		"the path to a folder to keep state. If you already have a "+
 			"letsencrypt account key, please name it 'account.key' in this folder.")
 	redirectAddr = flag.String("redirect-addr", "",
