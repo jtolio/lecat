@@ -18,7 +18,7 @@ import (
 
 func createKey(name string) (key *rsa.PrivateKey, err error) {
 	log.Printf("no key found at %s/%s.key, generating", *statePath, name)
-	key, err = rsa.GenerateKey(rand.Reader, 4096)
+	key, err = rsa.GenerateKey(rand.Reader, 2048)
 	if err != nil {
 		return nil, err
 	}
