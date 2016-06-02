@@ -5,17 +5,8 @@ package main
 
 import (
 	"net"
-	"os/user"
 	"time"
 )
-
-func currentUser() *user.User {
-	u, err := user.Current()
-	if err != nil {
-		panic(err)
-	}
-	return u
-}
 
 type tcpKeepAliveListener struct {
 	*net.TCPListener
