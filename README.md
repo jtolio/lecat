@@ -61,16 +61,15 @@ $ sudo ~/your/gopath/bin/lecat --host your.website.tld --target localhost:8080
 Lastly, you can also pass `--redirect-addr :80` to have the process start a
 small HTTP server listening on port 80 that redirects incoming unencrypted
 requests to HTTPS. Be aware that this little HTTP server will set the HSTS
-flag on redirected requests for one year, telling incoming browsers to never
-try HTTP again for that year period. If you use this setting and this isn't
+flag on redirected requests, telling incoming browsers to never
+try HTTP again for the configured period. If you use this setting and this isn't
 the behavior that you want, you'll probably need to clear your domain out of
 your browser's HSTS database. Or just keep using SSL.
 
 ### sudo?
 
 lecat doesn't really need sudo, it just needs
-`setcap 'cap_net_bind_service=+ep'` or something. I often
-forget the incantation.
+`setcap 'cap_net_bind_service=+ep' go/bin/lecat`.
 
 ## LICENSE
 
